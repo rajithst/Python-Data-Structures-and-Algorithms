@@ -8,6 +8,9 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
+    """
+    Insert operations
+    """
     def append(self, data):
         new_node = Node(data)
         if self.head is None:
@@ -31,6 +34,9 @@ class LinkedList:
         new_node.next = previous_node.next
         previous_node.next = new_node
 
+    """
+    delete operations
+    """
     def delete_by_value(self, value):
         curr_node = self.head
         if curr_node and curr_node.data == value:
@@ -47,6 +53,24 @@ class LinkedList:
         previous_node.next = curr_node.next
         curr_node = None
 
+    def delete_by_position(self,position):
+        if self.head:
+            curr_node = self.head
+            if position==0:
+                self.head = curr_node.next
+                curr_node = None
+                return
+            previous_node = None
+            count = 0
+            while count != position:
+                previous_node = curr_node
+                curr_node = curr_node.next
+                count+=1
+            if curr_node is None:
+                return
+            previous_node.next = curr_node.next
+            curr_node = None
+
     def print_list(self):
         curr_node = self.head
         while curr_node:
@@ -62,4 +86,11 @@ llist.append("D")
 llist.prepend("E")
 
 llist.insert_after_node(llist.head.next, "F")
+llist.print_list()
+print("-----------------")
+
+llist.delete_by_value("C")
+llist.print_list()
+print("-----------------")
+llist.delete_by_position(1)
 llist.print_list()
