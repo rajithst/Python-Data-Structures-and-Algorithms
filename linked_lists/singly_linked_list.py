@@ -120,6 +120,19 @@ class LinkedList:
 
         curr_node_1.next,curr_node_2.next = curr_node_2.next,curr_node_1.next
 
+    """
+    reverse linked list
+    """
+    def reverse_list_iteratively(self):
+        previous_node = None
+        current_node = self.head
+        while current_node:
+            next_node = current_node.next
+            current_node.next = previous_node
+            previous_node = current_node
+            current_node = next_node
+        self.head = previous_node
+
     def print_list(self):
         curr_node = self.head
         while curr_node:
@@ -134,5 +147,5 @@ llist.append("C")
 llist.append("D")
 llist.append("E")
 
-llist.swap_nodes("C","D")
+llist.reverse_list_iteratively()
 llist.print_list()
