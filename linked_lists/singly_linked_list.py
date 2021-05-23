@@ -71,6 +71,55 @@ class LinkedList:
             previous_node.next = curr_node.next
             curr_node = None
 
+    """
+    get length
+    """
+    def lenght_of_linked_list(self):
+        curr_node = self.head
+        count = 0
+        while curr_node is not None:
+            curr_node = curr_node.next
+            count+=1
+        return count
+
+    def length_of_linked_list_recursive(self,node):
+        if node is None:
+            return 0
+        return 1 + self.length_of_linked_list_recursive(node.next)
+
+
+    """
+    swap nodes
+    """
+    def swap_nodes(self,val1,val2):
+
+        curr_node_1 = self.head
+        previous_node_1 = None
+        while curr_node_1 and curr_node_1.data != val1:
+            previous_node_1 = curr_node_1
+            curr_node_1 = curr_node_1.next
+
+        curr_node_2 = self.head
+        previous_node_2 = None
+        while curr_node_2 and curr_node_2.data != val2:
+            previous_node_2 = curr_node_2
+            curr_node_2 = curr_node_2.next
+
+        if not curr_node_1 or not curr_node_2:
+            return
+
+        if previous_node_1:
+            previous_node_1.next = curr_node_2
+        else:
+            self.head = curr_node_2
+
+        if previous_node_2:
+            previous_node_2.next = curr_node_1
+        else:
+            self.head = curr_node_1
+
+        curr_node_1.next,curr_node_2.next = curr_node_2.next,curr_node_1.next
+
     def print_list(self):
         curr_node = self.head
         while curr_node:
@@ -83,14 +132,7 @@ llist.append("A")
 llist.append("B")
 llist.append("C")
 llist.append("D")
-llist.prepend("E")
+llist.append("E")
 
-llist.insert_after_node(llist.head.next, "F")
-llist.print_list()
-print("-----------------")
-
-llist.delete_by_value("C")
-llist.print_list()
-print("-----------------")
-llist.delete_by_position(1)
+llist.swap_nodes("C","D")
 llist.print_list()
