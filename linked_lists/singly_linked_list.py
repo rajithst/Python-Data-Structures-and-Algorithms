@@ -198,6 +198,31 @@ class LinkedList:
                 previous_node = current_node
             current_node = previous_node.next
 
+    """
+    nth to the last node
+    """
+    def print_nth_from_last(self,n):
+        length = self.lenght_of_linked_list()
+        curr = self.head
+        while curr:
+            if length == n:
+                return curr.data
+            length -= 1
+            curr = curr.next
+        if curr is None:
+            return
+    """
+    Occurences
+    """
+    def count_occurences_iterative(self,data):
+        current_node = self.head
+        count = 0
+        while current_node:
+            if current_node.data == data:
+                count += 1
+            current_node = current_node.next
+        return count
+
 
     def print_list(self):
         curr_node = self.head
@@ -207,16 +232,12 @@ class LinkedList:
 
 
 llist = LinkedList()
-llist.append(1)
-llist.append(6)
-llist.append(1)
-llist.append(4)
-llist.append(2)
-llist.append(2)
-llist.append(4)
+llist.append("A")
+llist.append("B")
+llist.append("C")
+llist.append("C")
+llist.append("C")
+llist.append("C")
+llist.append("D")
 
-print("Original Linked List")
-llist.print_list()
-print("Linked List After Removing Duplicates")
-llist.remove_duplicates()
-llist.print_list()
+print(llist.count_occurences_iterative("C"))
