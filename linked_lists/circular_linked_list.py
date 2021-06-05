@@ -4,7 +4,7 @@ class Node:
         self.next = None
 
 
-class CircularLinekdList:
+class CircularLinkedList:
     def __init__(self):
         self.head = None
 
@@ -19,3 +19,31 @@ class CircularLinekdList:
                 current_node = current_node.next
             current_node.next = new_node
             new_node.next = self.head
+
+    def prepend(self, data):
+        new_node = Node(data)
+        current_node = self.head
+        new_node.next = self.head
+        if not self.head:
+            new_node.next = new_node
+        else:
+            while current_node.next != self.head:
+                current_node = current_node.next
+            current_node.next = new_node
+        self.head = new_node
+
+    def print_list(self):
+        curr = self.head
+        while curr:
+            print(curr.data)
+            curr = curr.next
+            if curr == self.head:
+                break
+
+
+cllist = CircularLinkedList()
+cllist.append("C")
+cllist.append("D")
+cllist.prepend("B")
+cllist.prepend("A")
+cllist.print_list()

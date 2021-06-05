@@ -1,2 +1,10 @@
 # Python-Data-Structures
-1. Linked Lists
+ * Linked Lists
+     - Singly Linked List
+     - Circular Lined List
+     - Double Linked List
+    
+
+ * Trees
+    - Binary Tree
+   
