@@ -8,6 +8,16 @@ class CircularLinkedList:
     def __init__(self):
         self.head = None
 
+    def __len__(self):
+        current_node = self.head
+        count = 0
+        while current_node:
+            count+=1
+            current_node = current_node.next
+            if current_node == self.head:
+                break
+        return count
+
     def append(self, data):
         if not self.head:
             self.head = Node(data)
@@ -53,6 +63,34 @@ class CircularLinkedList:
                         previous_node.next = current_node.next
                         current_node = current_node.next
 
+
+    def split_list(self):
+        size = len(self)
+
+        if size == 0:
+            return None
+        if size == 1:
+            return self.head
+
+        mid = size//2
+        count = 0
+        current_node = self.head
+        previous_node = None
+        while current_node and count < mid:
+            previous_node = current_node
+            current_node = current_node.next
+            count+=1
+        previous_node.next = self.head
+
+        new_cllist = CircularLinkedList()
+        while current_node.next != self.head:
+            new_cllist.append(current_node.data)
+            current_node = current_node.next
+        new_cllist.append(current_node.data)
+        self.print_list()
+        print("\n")
+        new_cllist.print_list()
+
     def print_list(self):
         curr = self.head
         while curr:
@@ -67,5 +105,8 @@ cllist.append("C")
 cllist.append("D")
 cllist.prepend("B")
 cllist.prepend("A")
-cllist.delete_node("A")
-cllist.print_list()
+cllist.append("E")
+cllist.append("F")
+cllist.split_list()
+
+
