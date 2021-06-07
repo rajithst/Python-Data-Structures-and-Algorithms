@@ -31,7 +31,7 @@ class DoublyLinkedList:
             new_node.next = self.head
             self.head = new_node
 
-    def add_after_node(self,key,data):
+    def add_after_node(self, key, data):
         current_node = self.head
         while current_node:
             if current_node.next is None and current_node.data == key:
@@ -40,7 +40,6 @@ class DoublyLinkedList:
             elif current_node.data == key:
                 new_node = Node(data)
                 next_node = current_node.next
-                previous_node = current_node.prev
 
                 current_node.next = new_node
                 new_node.next = next_node
@@ -49,6 +48,22 @@ class DoublyLinkedList:
                 return
             current_node = current_node.next
 
+    def add_before_node(self, key, data):
+        current_node = self.head
+        while current_node:
+            if current_node.next is None and current_node.data == key:
+                self.append(data)
+                return
+            elif current_node.data == key:
+                new_node = Node(data)
+                previous_node = current_node.prev
+
+                previous_node.next = new_node
+                new_node.prev = previous_node
+                new_node.next = current_node
+                current_node.prev = new_node
+                return
+            current_node = current_node.next
 
     def print_list(self):
         cur = self.head
@@ -65,7 +80,7 @@ dllist.append(3)
 dllist.append(4)
 dllist.prepend(5)
 dllist.print_list()
-print("-"*10)
-dllist.add_after_node(2,110)
+print("-" * 10)
+dllist.add_before_node(1, 200)
 
 dllist.print_list()
