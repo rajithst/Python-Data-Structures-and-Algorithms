@@ -99,6 +99,18 @@ class DoublyLinkedList:
                     return
             current_node = current_node.next
 
+    def remove_duplicates(self):
+        current_node = self.head
+        seen = dict()
+        while current_node:
+            if current_node.data not in seen:
+                seen[current_node.data] = 1
+                current_node = current_node.next
+            else:
+                next_node = current_node.next
+                self.delete(current_node.data)
+                current_node = next_node
+
     def reverse(self):
         temp_node = None
         current_node = self.head
@@ -122,5 +134,9 @@ dllist.append(1)
 dllist.append(2)
 dllist.append(3)
 dllist.append(4)
-dllist.reverse()
+dllist.append(4)
+dllist.append(4)
+dllist.append(4)
+dllist.append(4)
+dllist.remove_duplicates()
 dllist.print_list()
