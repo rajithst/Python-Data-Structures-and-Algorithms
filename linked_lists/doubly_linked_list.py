@@ -65,6 +65,40 @@ class DoublyLinkedList:
                 return
             current_node = current_node.next
 
+    def delete(self, key):
+        current_node = self.head
+        while current_node:
+            if current_node.data == key and current_node == self.head:
+                if not current_node.next:
+                    current_node = None
+                    self.head = None
+                    return
+                else:
+                    next_node = current_node.next
+                    current_node.next = None
+                    next_node.prev = None
+                    current_node = None
+                    self.head = next_node
+                    return
+            elif current_node.data == key:
+                if current_node.next:
+                    next_node = current_node.next
+                    previous_node = current_node.prev
+
+                    previous_node.next = next_node
+                    next_node.prev = previous_node
+                    current_node.next = None
+                    current_node.prev = None
+                    current_node = None
+                    return
+                else:
+                    previous_node = current_node.prev
+                    previous_node.next = None
+                    current_node.prev = None
+                    current_node = None
+                    return
+            current_node = current_node.next
+
     def print_list(self):
         cur = self.head
         while cur:
@@ -73,14 +107,14 @@ class DoublyLinkedList:
 
 
 dllist = DoublyLinkedList()
-dllist.prepend(0)
 dllist.append(1)
 dllist.append(2)
 dllist.append(3)
 dllist.append(4)
-dllist.prepend(5)
-dllist.print_list()
-print("-" * 10)
-dllist.add_before_node(1, 200)
 
+dllist.delete(1)
+dllist.delete(6)
+dllist.delete(4)
+
+dllist.delete(3)
 dllist.print_list()
