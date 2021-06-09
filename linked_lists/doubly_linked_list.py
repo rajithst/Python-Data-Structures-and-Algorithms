@@ -111,6 +111,19 @@ class DoublyLinkedList:
                 self.delete(current_node.data)
                 current_node = next_node
 
+    def pairs_with_sum(self,key):
+        pairs = list()
+        p = self.head
+        q = None
+        while p:
+            q = p.next
+            while q:
+                if (p.data + q.data) == key:
+                    pairs.append(f"({p.data},{q.data})")
+                q = q.next
+            p = p.next
+        return pairs
+
     def reverse(self):
         temp_node = None
         current_node = self.head
@@ -134,9 +147,7 @@ dllist.append(1)
 dllist.append(2)
 dllist.append(3)
 dllist.append(4)
+dllist.append(5)
 dllist.append(4)
-dllist.append(4)
-dllist.append(4)
-dllist.append(4)
-dllist.remove_duplicates()
-dllist.print_list()
+dllist.append(6)
+print(dllist.pairs_with_sum(6))
