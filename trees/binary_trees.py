@@ -1,4 +1,31 @@
+from trees.stack import Stack
 from trees.queue import Queue
+
+
+class Queue(object):
+    def __init__(self):
+        self.items = []
+
+    def enqueue(self, item):
+        self.items.insert(0, item)
+
+    def dequeue(self):
+        if not self.is_empty():
+            return self.items.pop()
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1].value
+
+    def __len__(self):
+        return self.size()
+
+    def size(self):
+        return len(self.items)
+
 
 
 class Node:
@@ -56,10 +83,31 @@ class BinaryTree:
                 queue.enqueue(node.right)
         return traversal
 
+    def reverse_level_order_traversal(self, start):
+        if start is None:
+            return
+
+        queue = Queue()
+        stack = Stack()
+        queue.enqueue(start)
+        traversal = ""
+        while len(queue) > 0:
+            node = queue.dequeue()
+            stack.push(node)
+
+            if node.right:
+                queue.enqueue(node.right)
+            if node.left:
+                queue.enqueue(node.left)
+        while len(stack) > 0:
+            node = stack.pop()
+            traversal += str(node.value) + "-"
+        return traversal
+
 
 tree = BinaryTree(1)
 tree.root.left = Node(2)
 tree.root.right = Node(3)
 tree.root.left.left = Node(4)
 tree.root.left.right = Node(5)
-print(tree.level_order_traversal(tree.root))
+print(tree.reverse_level_order_traversal(tree.root))
