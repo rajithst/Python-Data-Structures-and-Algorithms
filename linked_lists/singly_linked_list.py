@@ -257,6 +257,13 @@ class LinkedList:
             self.head = p.next
             p.next = None
 
+    """
+    is palindrome 
+
+    """
+    def is_palindrome(slef):
+        pass    
+
     def move_tail_to_head(self):
         if self.head and self.head.next:
             last = self.head
@@ -268,6 +275,9 @@ class LinkedList:
             last.next = self.head
             second_to_last.next = None
             self.head = last
+
+    def sum_two_linked_lists(self):
+        pass
 
     def print_list(self):
         curr_node = self.head
