@@ -4,6 +4,7 @@
      - Circular Lined List
      - Double Linked List
     
+ * Stack
 
  * Trees
     - Binary Tree
