@@ -64,7 +64,7 @@ class BinaryTree:
         return traversal
 
     """
-    level order traversal
+    breath first traversal
     """
 
     def level_order_traversal(self, start):
@@ -103,6 +103,10 @@ class BinaryTree:
             traversal += str(node.value) + "-"
         return traversal
 
+    """
+    height of a binary tree
+    step 1 -> 
+    """
     def height(self, node):
         if node is None:
             return -1
