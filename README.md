@@ -5,9 +5,11 @@
      - Double Linked List
     
  * Stack
+ * Queue
 
  * Trees
     - Binary Tree
     - Binary Search Tree
    
  * Graph
+    - BFS
