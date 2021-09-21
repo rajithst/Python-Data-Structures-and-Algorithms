@@ -1,9 +1,9 @@
 from graph.graph import Graph
-
-g = Graph(4)
-g.add_edge(0, 2)
-g.add_edge(0, 1)
-g.add_edge(1, 3)
-g.add_edge(2, 3)
-g.add_edge(3, 1)
-g.print_graph()
+from graph.BFS import graph_bfs_traversal
+vertices = ["A","B","C","D","E","F","G"]
+edges = [("A","B"),("A","C"),("B","D"),("C","D"),("C","E"),("D","E"),("F","G")]
+gp = Graph(vertices)
+for u,v in edges:
+    gp.add_edge(u,v)
+gp.print_graph()
+graph_bfs_traversal(gp, source="A")
