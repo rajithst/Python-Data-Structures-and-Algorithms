@@ -13,3 +13,5 @@
    
  * Graph
     - BFS
+    - DFS
+    - Detect Cycles
