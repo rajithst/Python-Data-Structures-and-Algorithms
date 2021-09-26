@@ -45,7 +45,7 @@ def find_shortest_path():
     for u, v in edges:
         g1.add_edge(u, v)
     #g1.print_graph()
-    print(shortest_path_find(g1,source=0,destination=4))
+    print(shortest_path_find(g1,source=0))
 
 find_shortest_path()
 

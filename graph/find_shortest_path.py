@@ -1,23 +1,24 @@
 from queue.queue import Queue
 
 
-def bfs_traversal_helper(gp, src, visited, distance):
+def bfs_traversal_helper(gp, src, destination, visited, distance):
     queue = Queue()
     queue.enqueue(src)
     visited[src] = True
     distance[src] = 0
-    results = ""
+
     while not queue.is_empty():
         current_node = queue.dequeue()
-        results += str(current_node) + "=>"
         temp = gp.adj_list[current_node].head
         while temp is not None:
             if not visited[temp.val]:
                 queue.enqueue(temp.val)
                 visited[temp.val] = True
                 distance[temp.val] = distance[current_node] + 1
+                if temp.val == destination:
+                    return distance
             temp = temp.next
-    return results, visited, distance
+    return distance
 
 
 def shortest_path_find(graph, source, destination=-1):
@@ -27,11 +28,10 @@ def shortest_path_find(graph, source, destination=-1):
         visited[i] = False
         distance[i] = 0
 
-    results, visited, distance = bfs_traversal_helper(graph, source, visited, distance)
+    distance = bfs_traversal_helper(graph, source, destination,visited, distance)
     for v in graph.vertices:
         if not visited[v]:
-            results_new, visited, distance = bfs_traversal_helper(graph, v, visited, distance)
-            results += results_new
+            distance = bfs_traversal_helper(graph, v, visited, distance)
 
     if destination != -1:
         print(distance[destination])
