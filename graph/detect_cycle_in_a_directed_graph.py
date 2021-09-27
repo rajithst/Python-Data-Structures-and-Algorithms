@@ -19,3 +19,4 @@ def dfs_visiting(graph, vertex, visited):
         current_adj_head = current_adj_head.next
     visited[vertex] = False
     return False
+#TODO detect cycles using dfs stack method

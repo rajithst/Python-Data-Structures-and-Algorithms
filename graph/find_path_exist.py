@@ -1,7 +1,38 @@
 from queue.queue import Queue
+from stack.stack import Stack
 
 
-def bfs_traversal_path_exist(graph,start,destination):
+def dfs_helper(graph, start, destination, visited):
+    stack = Stack()
+    stack.push(start)
+    visited[start] = True
+
+    while not stack.is_empty():
+        current_node = stack.pop()
+        temp = graph.adj_list[current_node].head
+        while temp is not None:
+            if not visited[temp.val]:
+                stack.push(temp.val)
+                visited[temp.val] = True
+                if temp.val == destination:
+                    return True
+            temp = temp.next
+    return False
+
+
+def dfs_traversal_path_exist(graph, start, destination):
+    if start == destination:
+        return True
+    visited = {}
+    for i in graph.vertices:
+        visited[i] = False
+
+    return dfs_helper(graph, start, destination, visited)
+
+
+def bfs_traversal_path_exist(graph, start, destination):
+    if start == destination:
+        return True
     visited = {}
     for i in graph.vertices:
         visited[i] = False
