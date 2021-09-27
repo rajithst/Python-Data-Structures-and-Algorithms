@@ -5,6 +5,8 @@ from graph.detect_cycle_in_a_directed_graph import detect_cycle
 from graph.find_mother_vertex import find_mother_vertex_naive
 from graph.find_shortest_path import shortest_path_find
 from graph.number_of_edges_of_a_undirected_graph import count_edges
+from graph.find_path_exist import bfs_traversal_path_exist
+
 
 def bfs_dfs_traversal():
     vertices = ["A", "B", "C", "D", "E", "F", "G"]
@@ -59,4 +61,16 @@ def count_edges_of_a_undirected_graph():
         g1.add_edge(u, v, directed=False)
     print(count_edges(g1))
 
-count_edges_of_a_undirected_graph()
+
+def path_exist_bfs():
+    vertices = [0, 1, 2, 3, 4, 5]
+    edges = [(0, 1), (0, 2), (0, 3), (2, 4), (3, 5), (5, 4)]
+
+    g1 = Graph(vertices)
+    for u, v in edges:
+        g1.add_edge(u, v, directed=True)
+    g1.print_graph()
+    print(bfs_traversal_path_exist(g1, start=0, destination=5))
+
+
+path_exist_bfs()
