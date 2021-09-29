@@ -6,6 +6,7 @@ from graph.find_mother_vertex import find_mother_vertex_naive
 from graph.find_shortest_path import shortest_path_find
 from graph.number_of_edges_of_a_undirected_graph import count_edges
 from graph.find_path_exist import bfs_traversal_path_exist, dfs_traversal_path_exist
+from graph.undirected_graph_is_a_tree_or_not import is_tree
 
 
 def bfs_dfs_traversal():
@@ -84,4 +85,15 @@ def path_exist_dfs():
     print(dfs_traversal_path_exist(g1, start=2, destination=3))
 
 
-path_exist_dfs()
+def is_a_tree():
+    vertices = [0, 1, 2, 3, 4]
+    edges = [(0, 1), (0, 2),(2,1), (0, 3), (3, 4)]
+
+    g1 = Graph(vertices)
+    for u, v in edges:
+        g1.add_edge(u, v, directed=False)
+    g1.print_graph()
+    print(is_tree(g1, start=0))
+
+
+is_a_tree()

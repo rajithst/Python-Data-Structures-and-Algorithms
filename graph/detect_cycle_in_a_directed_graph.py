@@ -1,5 +1,5 @@
 def detect_cycle(graph):
-    visited = dict(zip(graph.vertices,[False] * len(graph.vertices)))
+    visited = dict(zip(graph.vertices, [False] * len(graph.vertices)))
     for i in graph.vertices:
         if dfs_visiting(graph, i, visited):
             return True
@@ -19,4 +19,5 @@ def dfs_visiting(graph, vertex, visited):
         current_adj_head = current_adj_head.next
     visited[vertex] = False
     return False
-#TODO detect cycles using dfs stack method
+
+# TODO detect cycles using dfs and stack ds method
