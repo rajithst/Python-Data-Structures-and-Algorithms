@@ -1,3 +1,4 @@
+from graph.delete_edge import delete_edge
 from graph.graph import Graph
 from graph.BFS import graph_bfs_traversal
 from graph.DFS import graph_dfs_traversal
@@ -87,7 +88,7 @@ def path_exist_dfs():
 
 def is_a_tree():
     vertices = [0, 1, 2, 3, 4]
-    edges = [(0, 1), (0, 2),(2,1), (0, 3), (3, 4)]
+    edges = [(0, 1), (0, 2), (2, 1), (0, 3), (3, 4)]
 
     g1 = Graph(vertices)
     for u, v in edges:
@@ -96,4 +97,16 @@ def is_a_tree():
     print(is_tree(g1, start=0))
 
 
-is_a_tree()
+def remove_edge():
+    vertices = [0, 1, 2, 3, 4]
+    edges = [(0, 1), (0, 2), (1, 3), (2, 4), (4, 0)]
+
+    g1 = Graph(vertices)
+    for u, v in edges:
+        g1.add_edge(u, v)
+    g1.print_graph()
+    print(delete_edge(g1, start=0, end=1))
+    g1.print_graph()
+
+
+remove_edge()
