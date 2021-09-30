@@ -2,7 +2,13 @@ from queue.queue import Queue
 from stack.stack import Stack
 
 
-def dfs_helper(graph, start, destination, visited):
+def dfs_traversal_path_exist(graph, start, destination):
+    if start == destination:
+        return True
+    visited = {}
+    for i in graph.vertices:
+        visited[i] = False
+
     stack = Stack()
     stack.push(start)
     visited[start] = True
@@ -20,25 +26,12 @@ def dfs_helper(graph, start, destination, visited):
     return False
 
 
-def dfs_traversal_path_exist(graph, start, destination):
-    if start == destination:
-        return True
-    visited = {}
-    for i in graph.vertices:
-        visited[i] = False
-
-    return dfs_helper(graph, start, destination, visited)
-
-
 def bfs_traversal_path_exist(graph, start, destination):
     if start == destination:
         return True
     visited = {}
     for i in graph.vertices:
         visited[i] = False
-
-    # if destination not in visited.keys():
-    #     return False
 
     queue = Queue()
     queue.enqueue(start)
