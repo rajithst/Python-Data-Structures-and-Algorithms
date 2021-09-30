@@ -36,3 +36,5 @@
     - Detect Cycles in a directed graph
     - Find Path exist between given two nodes
     - Count number of edges of an Undirected Graph
+    - Check Undirected Graph is a Tree
+    - Delete edge from the Graph
