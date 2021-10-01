@@ -1,3 +1,4 @@
+from graph.clone_undirected_graph import clone_graph
 from graph.delete_edge import delete_edge
 from graph.graph import Graph
 from graph.BFS import graph_bfs_traversal
@@ -109,4 +110,16 @@ def remove_edge():
     g1.print_graph()
 
 
-path_exist_dfs()
+def clone_undirected_graph():
+    vertices = [0, 1, 2, 3, 4]
+    edges = [(0, 1), (0, 2), (1, 3), (2, 4), (4, 0)]
+
+    g1 = Graph(vertices)
+    for u, v in edges:
+        g1.add_edge(u, v, directed=False)
+    g1.print_graph()
+    res = clone_graph(0,g1)
+    print(res.neighbours)
+
+
+clone_undirected_graph()
