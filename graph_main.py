@@ -3,7 +3,7 @@ from graph.delete_edge import delete_edge
 from graph.graph import Graph
 from graph.BFS import graph_bfs_traversal
 from graph.DFS import graph_dfs_traversal
-from graph.detect_cycle_in_a_directed_graph import detect_cycle
+from graph.detect_cycle_in_a_directed_graph import detect_cycle_directed, detect_cycle_undirected
 from graph.find_mother_vertex import find_mother_vertex_naive
 from graph.find_shortest_path import shortest_path_find
 from graph.number_of_edges_of_a_undirected_graph import count_edges
@@ -22,7 +22,7 @@ def bfs_dfs_traversal():
     graph_dfs_traversal(gp, source="A")
 
 
-def detect_cycles():
+def detect_cycles_directed():
     vertices = [0, 1, 2, 3, ]
     edges = [(0, 1), (1, 2), (1, 3), (3, 2)]
 
@@ -30,7 +30,18 @@ def detect_cycles():
     for u, v in edges:
         g1.add_edge(u, v)
     g1.print_graph()
-    print(detect_cycle(g1))
+    print(detect_cycle_directed(g1))
+
+
+def detect_cycles_undirected():
+    vertices = [0, 1, 2, 3, 4]
+    edges = [(0, 1), (1, 2), (1, 3), (3, 4)]
+
+    g1 = Graph(vertices)
+    for u, v in edges:
+        g1.add_edge(u, v, directed=False)
+    g1.print_graph()
+    print(detect_cycle_undirected(g1, start=0))
 
 
 def find_mother_vertex():
@@ -118,8 +129,8 @@ def clone_undirected_graph():
     for u, v in edges:
         g1.add_edge(u, v, directed=False)
     g1.print_graph()
-    res = clone_graph(0,g1)
+    res = clone_graph(0, g1)
     print(res.neighbours)
 
 
-clone_undirected_graph()
+detect_cycles_undirected()
