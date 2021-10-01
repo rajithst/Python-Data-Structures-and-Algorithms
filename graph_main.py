@@ -3,7 +3,7 @@ from graph.delete_edge import delete_edge
 from graph.graph import Graph
 from graph.BFS import graph_bfs_traversal
 from graph.DFS import graph_dfs_traversal
-from graph.detect_cycle_in_a_directed_graph import detect_cycle_directed, detect_cycle_undirected
+from graph.detect_cycles_in_a_graph import detect_cycle_directed, detect_cycle_undirected
 from graph.find_mother_vertex import find_mother_vertex_naive
 from graph.find_shortest_path import shortest_path_find
 from graph.number_of_edges_of_a_undirected_graph import count_edges

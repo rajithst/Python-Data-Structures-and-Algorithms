@@ -34,7 +34,9 @@
     - Depth First Search (DFS)
     - Find the shortest path from a start node to end node  
     - Detect Cycles in a directed graph
+    - Detect Cycles in an Undirected graph
     - Find Path exist between given two nodes
     - Count number of edges of an Undirected Graph
     - Check Undirected Graph is a Tree
     - Delete edge from the Graph
+    - Clone an Undirected Graph
