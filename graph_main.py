@@ -1,3 +1,4 @@
+from graph.bipartite_graph import is_bipartite_graph
 from graph.clone_undirected_graph import clone_graph
 from graph.delete_edge import delete_edge
 from graph.graph import Graph
@@ -133,4 +134,15 @@ def clone_undirected_graph():
     print(res.neighbours)
 
 
-detect_cycles_undirected()
+def check_bipartite_graph():
+    vertices = [1, 2, 3, 4]
+    edges = [(1, 2), (2, 3), (3, 4), (4, 1)]
+
+    g1 = Graph(vertices)
+    for u, v in edges:
+        g1.add_edge(u, v, directed=False)
+    g1.print_graph()
+    print(is_bipartite_graph(g1))
+
+
+check_bipartite_graph()
