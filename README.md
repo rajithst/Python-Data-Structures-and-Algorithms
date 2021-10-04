@@ -43,3 +43,5 @@
     - Check an Undirected Graph is a Bipartite graph
     - Topological Sort of Directed Acyclic Graph (DAG) using Khan's Algorithm(BFS)
     - Topological Sort of Directed Acyclic Graph (DAG) using Depth First Search
+
+* Disjoint Set
