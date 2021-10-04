@@ -10,6 +10,7 @@ from graph.find_shortest_path import shortest_path_find
 from graph.khans_algorithm import topological_sort_bfs
 from graph.number_of_edges_of_a_undirected_graph import count_edges
 from graph.find_path_exist import bfs_traversal_path_exist, dfs_traversal_path_exist
+from graph.topological_sort_dfs import topological_sort_dfs
 from graph.undirected_graph_is_a_tree_or_not import is_tree
 
 
@@ -148,7 +149,7 @@ def check_bipartite_graph():
 
 def khans_algorithm_topological_sort_using_bfs():
     vertices = [0, 1, 2, 3, 4, 5]
-    edges = [(1, 2), (0, 2), (2, 4), (2, 3), (4,5), (3, 5)]
+    edges = [(1, 2), (0, 2), (2, 4), (2, 3), (4, 5), (3, 5)]
 
     g1 = Graph(vertices)
     for u, v in edges:
@@ -157,4 +158,15 @@ def khans_algorithm_topological_sort_using_bfs():
     print(topological_sort_bfs(g1))
 
 
-khans_algorithm_topological_sort_using_bfs()
+def topological_sort_using_dfs():
+    vertices = [0, 1, 2, 3, 4, 5]
+    edges = [(1, 2), (0, 2), (2, 4), (2, 3), (4, 5), (3, 5)]
+
+    g1 = Graph(vertices)
+    for u, v in edges:
+        g1.add_edge(u, v)
+    g1.print_graph()
+    print(topological_sort_dfs(g1))
+
+
+topological_sort_using_dfs()
