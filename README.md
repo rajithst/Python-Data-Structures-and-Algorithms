@@ -1,4 +1,4 @@
-# Python-Data-Structures
+# Python Data Structures and Algorithms Implementation
  * Linked Lists
      - Singly Linked List
         * Append 
