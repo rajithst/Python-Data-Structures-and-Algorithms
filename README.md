@@ -45,3 +45,6 @@
     - Topological Sort of Directed Acyclic Graph (DAG) using Depth First Search
 
 * Disjoint Set
+    - Quick Union Find
+    - Union By Rank
+    - Path Compression Optimization
