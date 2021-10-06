@@ -1,4 +1,4 @@
-from queue.queue import Queue
+from queue_ds.queue_ds import QueueDs
 from stack.stack import Stack
 
 
@@ -33,7 +33,7 @@ def bfs_traversal_path_exist(graph, start, destination):
     for i in graph.vertices:
         visited[i] = False
 
-    queue = Queue()
+    queue = QueueDs()
     queue.enqueue(start)
 
     while not queue.is_empty():

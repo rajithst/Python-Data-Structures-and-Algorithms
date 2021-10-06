@@ -1,8 +1,8 @@
 from trees.stack import Stack
-from trees.queue import Queue
+from trees.queue_ds import QueueDS
 
 
-class Queue(object):
+class QueueIT(object):
     def __init__(self):
         self.items = []
 
@@ -86,7 +86,7 @@ class BinaryTree:
         if start is None:
             return
 
-        queue = Queue()
+        queue = QueueIT()
         stack = Stack()
         queue.enqueue(start)
         traversal = ""

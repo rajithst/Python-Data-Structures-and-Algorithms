@@ -1,8 +1,8 @@
-from queue.queue import Queue
+from queue_ds.queue_ds import QueueDs
 
 
 def bfs_traversal_helper(gp, src, destination, visited, distance):
-    queue = Queue()
+    queue = QueueDs()
     queue.enqueue(src)
     visited[src] = True
     distance[src] = 0

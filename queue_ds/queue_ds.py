@@ -1,4 +1,4 @@
-class Queue:
+class QueueDs:
     def __init__(self):
         self.queue_list = []
 

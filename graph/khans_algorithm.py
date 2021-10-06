@@ -22,7 +22,7 @@ def topological_sort_bfs(graph):
         if indegrees[v] == 0:
             queue.append(v)
 
-    # iterate over queue to topological sort
+    # iterate over queue_ds to topological sort
     result = ""
     while queue:
         current_node = queue.popleft()
