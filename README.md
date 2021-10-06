@@ -48,3 +48,5 @@
     - Quick Union Find
     - Union By Rank
     - Path Compression Optimization
+* Heap
+    - Max Heap
