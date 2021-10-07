@@ -50,3 +50,4 @@
     - Path Compression Optimization
 * Heap
     - Max Heap
+    - Min Heap
