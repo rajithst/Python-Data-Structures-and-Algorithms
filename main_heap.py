@@ -1,4 +1,5 @@
 from heap.max_heap import MaxHeap
+from heap.min_heap import MinHeap
 
 mh = MaxHeap()
 mh.insert(100)
@@ -14,3 +15,17 @@ mh.insert(40)
 print(mh.heap)
 mh.remove_max()
 print(mh.heap)
+mh.remove_max()
+print(mh.heap)
+
+heap = MinHeap()
+heap.insert(12)
+heap.insert(10)
+heap.insert(-10)
+heap.insert(100)
+
+print(heap.getMin())
+print(heap.removeMin())
+print(heap.getMin())
+heap.insert(-100)
+print(heap.getMin())
