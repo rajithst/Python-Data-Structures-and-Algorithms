@@ -16,14 +16,18 @@ class Graph:
 def shortest_path_dikstra(graph, src, dest):
     distance = [float("inf")] * graph.vertices
     distance[src] = 0
+    visited = set()
     pq = []
     heap.heappush(pq, (0, src))
     while pq:
         length_till_now, node = heap.heappop(pq)
+        visited.add(node)
         nbrs = graph.adj_list[node]
         for nei in nbrs:
             current_length = nei[0]
             current_node = nei[1]
+            if current_node in visited:
+                continue
             if length_till_now + current_length < distance[current_node]:
                 distance[current_node] = length_till_now + current_length
                 heap.heappush(pq, (distance[current_node], current_node))
