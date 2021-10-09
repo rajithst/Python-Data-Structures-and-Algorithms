@@ -45,6 +45,7 @@
     - Topological Sort of Directed Acyclic Graph (DAG) using Depth First Search
     - Minimum Spanning Tree - Prim's Algorithm
     - Minimum Spanning Tree - Kruskal's Algorithm
+    - Shortest Path - Dijkstra Algorithm
 
 * Disjoint Set
     - Quick Union Find
