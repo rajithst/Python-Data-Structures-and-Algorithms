@@ -44,6 +44,7 @@
     - Topological Sort of Directed Acyclic Graph (DAG) using Khan's Algorithm(BFS)
     - Topological Sort of Directed Acyclic Graph (DAG) using Depth First Search
     - Minimum Spanning Tree - Prim's Algorithm
+    - Minimum Spanning Tree - Kruskal's Algorithm
 
 * Disjoint Set
     - Quick Union Find
