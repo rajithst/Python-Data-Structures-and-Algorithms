@@ -47,6 +47,7 @@
     - Minimum Spanning Tree - Kruskal's Algorithm
     - Shortest Path - Dijkstra Algorithm
     - Shortest Path - Bellman Ford Algorithm
+    - Shortest Path - Floyd Warshall Algorithm
 
 * Disjoint Set
     - Quick Union Find
