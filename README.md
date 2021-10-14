@@ -45,7 +45,10 @@
       - Floyd Warshall Algorithm
       - Single Source Shortest Path using BFS (SSSP)
     - Flood Filling Algorithms
-      - Number of Islands  
+      - Number of Islands
+      - Coloring Islands
+      - Calculate Island sizes
+      
     - Detect Cycles in a directed graph
     - Detect Cycles in an Undirected graph
     - Find Path exist between given two nodes
