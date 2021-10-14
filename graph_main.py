@@ -2,15 +2,15 @@ from graph.bipartite_graph import is_bipartite_graph
 from graph.clone_undirected_graph import clone_graph
 from graph.delete_edge import delete_edge
 from graph.graph import Graph
-from graph.BFS import graph_bfs_traversal
-from graph.DFS import graph_dfs_traversal
+from graph.traversal.BFS import graph_bfs_traversal
+from graph.traversal.DFS import graph_dfs_traversal
 from graph.detect_cycles_in_a_graph import detect_cycle_directed, detect_cycle_undirected
 from graph.find_mother_vertex import find_mother_vertex_naive
-from graph.find_shortest_path import shortest_path_find
-from graph.khans_algorithm import topological_sort_bfs
+from graph.shortest_path.BFS_SSSP import shortest_path_find
+from graph.topological_sort.khans_algorithm import topological_sort_bfs
 from graph.number_of_edges_of_a_undirected_graph import count_edges
 from graph.find_path_exist import bfs_traversal_path_exist, dfs_traversal_path_exist
-from graph.topological_sort_dfs import topological_sort_dfs
+from graph.topological_sort.topological_sort_dfs import topological_sort_dfs
 from graph.undirected_graph_is_a_tree_or_not import is_tree
 
 

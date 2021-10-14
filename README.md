@@ -30,9 +30,22 @@
     - Binary Search Tree
    
  * Graph
-    - Breadth First Search (BFS)
-    - Depth First Search (DFS)
-    - Find the shortest path from a start node to end node  
+    - Graph Traversal
+      - Breadth First Search (BFS)
+      - Depth First Search (DFS)
+    - Topological Sort of Directed Acyclic Graph (DAG) 
+      - Khan's Algorithm(BFS)
+      - Depth First Search
+    - Minimum Spanning Tree
+      - Prim's Algorithm 
+      - Kruskal's Algorithm
+    - Shortest Path
+      - Dijkstra Algorithm
+      - Bellman Ford Algorithm
+      - Floyd Warshall Algorithm
+      - Single Source Shortest Path using BFS (SSSP)
+    - Flood Filling Algorithms
+      - Number of Islands  
     - Detect Cycles in a directed graph
     - Detect Cycles in an Undirected graph
     - Find Path exist between given two nodes
@@ -41,18 +54,12 @@
     - Delete edge from the Graph
     - Clone an Undirected Graph
     - Check an Undirected Graph is a Bipartite graph
-    - Topological Sort of Directed Acyclic Graph (DAG) using Khan's Algorithm(BFS)
-    - Topological Sort of Directed Acyclic Graph (DAG) using Depth First Search
-    - Minimum Spanning Tree - Prim's Algorithm
-    - Minimum Spanning Tree - Kruskal's Algorithm
-    - Shortest Path - Dijkstra Algorithm
-    - Shortest Path - Bellman Ford Algorithm
-    - Shortest Path - Floyd Warshall Algorithm
-
-* Disjoint Set
-    - Quick Union Find
-    - Union By Rank
-    - Path Compression Optimization
-* Heap
-    - Max Heap
-    - Min Heap
+      
+     
+ * Disjoint Set
+     - Quick Union Find
+     - Union By Rank
+     - Path Compression Optimization
+ * Heap
+     - Max Heap
+     - Min Heap
