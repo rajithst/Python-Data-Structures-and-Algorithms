@@ -48,6 +48,7 @@
       - Number of Islands
       - Coloring Islands
       - Calculate Island sizes
+      - Make largest island
       
     - Detect Cycles in a directed graph
     - Detect Cycles in an Undirected graph
