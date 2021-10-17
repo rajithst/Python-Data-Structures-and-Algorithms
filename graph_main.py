@@ -4,7 +4,6 @@ from graph.delete_edge import delete_edge
 from graph.graph import Graph
 from graph.traversal.BFS import graph_bfs_traversal
 from graph.traversal.DFS import graph_dfs_traversal
-from graph.detect_cycles_in_a_graph import detect_cycle_directed, detect_cycle_undirected
 from graph.find_mother_vertex import find_mother_vertex_naive
 from graph.shortest_path.BFS_SSSP import shortest_path_find
 from graph.topological_sort.khans_algorithm import topological_sort_bfs
@@ -24,27 +23,6 @@ def bfs_dfs_traversal():
     graph_bfs_traversal(gp, source="A")
     graph_dfs_traversal(gp, source="A")
 
-
-def detect_cycles_directed():
-    vertices = [0, 1, 2, 3, ]
-    edges = [(0, 1), (1, 2), (1, 3), (3, 2)]
-
-    g1 = Graph(vertices)
-    for u, v in edges:
-        g1.add_edge(u, v)
-    g1.print_graph()
-    print(detect_cycle_directed(g1))
-
-
-def detect_cycles_undirected():
-    vertices = [0, 1, 2, 3, 4]
-    edges = [(0, 1), (1, 2), (1, 3), (3, 4)]
-
-    g1 = Graph(vertices)
-    for u, v in edges:
-        g1.add_edge(u, v, directed=False)
-    g1.print_graph()
-    print(detect_cycle_undirected(g1, start=0))
 
 
 def find_mother_vertex():
