@@ -33,6 +33,10 @@
     - Graph Traversal
       - Breadth First Search (BFS)
       - Depth First Search (DFS)
+    - Cycle Detection
+      - Cycle detection in Undirected Graph (DFS recursive)
+      - Cycle detection in Directed Graph (DFS recursive)
+      
     - Topological Sort of Directed Acyclic Graph (DAG) 
       - Khan's Algorithm(BFS)
       - Depth First Search
