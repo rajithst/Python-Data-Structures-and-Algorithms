@@ -69,3 +69,6 @@
  * Heap
      - Max Heap
      - Min Heap
+ * Recursion
+     - Head and Tail recursion example
+
