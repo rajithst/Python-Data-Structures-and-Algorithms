@@ -53,9 +53,7 @@
       - Coloring Islands
       - Calculate Island sizes
       - Make largest island
-      
-    - Detect Cycles in a directed graph
-    - Detect Cycles in an Undirected graph
+
     - Find Path exist between given two nodes
     - Count number of edges of an Undirected Graph
     - Check Undirected Graph is a Tree
