@@ -74,4 +74,5 @@
    
 * Trie
      - Insert
+     - Search
  
