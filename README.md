@@ -71,4 +71,7 @@
      - Min Heap
  * Recursion
      - Head and Tail recursion example
-
+   
+* Trie
+     - Insert
+ 
