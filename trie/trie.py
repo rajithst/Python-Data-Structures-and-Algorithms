@@ -1,6 +1,6 @@
 class TrieNode:
     def __init__(self, char=""):
-        self.children = [None] * 26
+        self.children = {}
         self.is_end = False
         self.char = char
 
@@ -8,12 +8,6 @@ class TrieNode:
 class Trie:
     def __init__(self):
         self.root = TrieNode()
-
-    def get_index_of_character(self,character):
-        return ord(character) - ord("a")
-        # ord("b") = 98
-        # ord("a") = 97
-        #index of the b in self.children == 98 -97 = 1
 
     def insert(self,key):
         if key is None:
@@ -23,13 +17,12 @@ class Trie:
         current = self.root
 
         for letter in key:
-            index_of_letter = self.get_index_of_character(letter)
 
-            if current.children[index_of_letter] is None:
-                current.children[index_of_letter] = TrieNode(letter)
+            if letter not in current.children:
+                current.children[letter] = TrieNode(letter)
                 print(letter,"Inserted")
 
-            current = current.children[index_of_letter]
+            current = current.children[letter]
         current.is_end = True
         print(key,"Inserted")
 
@@ -41,16 +34,11 @@ class Trie:
         current = self.root
 
         for letter in key:
-            # if letter does not exist in the trie,return False
-            letter_index = self.get_index_of_character(letter)
-            if current.children[letter_index] is None:
+            if letter not in current.children:
                 return False
             #else keep digging through childrens
-            current = current.children[letter_index]
-        #after iterate through all string,end letter is not none and end letter is mark as end,word found
-        if current is not None and current.is_end:
-            return True
-        return False
+            current = current.children[letter]
+        return current.is_end
 
 
 # Input keys (use only 'a' through 'z')
