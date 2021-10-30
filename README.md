@@ -74,7 +74,10 @@
  * Recursion
      - Head and Tail recursion example
    
-* Trie
-     - Insert
-     - Search
+ * Trie
+      - Insert
+      - Search
+ * List
+   - Basic List operations (append,insert,remove,pop,reverse)
+   - Basic List slicing
  
