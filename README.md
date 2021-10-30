@@ -77,7 +77,8 @@
  * Trie
       - Insert
       - Search
- * List
+ * List/Arrays
    - Basic List operations (append,insert,remove,pop,reverse)
    - Basic List slicing
+   - Basic Array operations
  
