@@ -81,4 +81,5 @@
    - Basic List operations (append,insert,remove,pop,reverse)
    - Basic List slicing
    - Basic Array operations
+   - Merge two sorted lists
  
