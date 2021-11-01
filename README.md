@@ -53,6 +53,9 @@
       - Coloring Islands
       - Calculate Island sizes
       - Make largest island
+    - DFS-Tree and Back-Edges
+      - Cycle detection in an undirected graph using back-edges
+      - Cycle detection in a directed/undirected graph using back-edges and ancestor property
     - Strongly Connected Components
       - Topological Ordering
       
