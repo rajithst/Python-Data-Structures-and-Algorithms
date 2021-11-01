@@ -13,7 +13,7 @@ for u, v in edges:
     if v not in adj_list:
         adj_list[v] = []
     adj_list[u].append(v)
-    adj_list[v].append(u)
+    #adj_list[v].append(u)
 
 
 def dfs(node, parent):
