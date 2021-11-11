@@ -61,6 +61,7 @@
       - Find Articulation points and bridges
     - Strongly Connected Components
       - Topological Ordering
+      - Kosaraju Algorithm
       
     - Find Path exist between given two nodes
     - Count number of edges of an Undirected Graph
