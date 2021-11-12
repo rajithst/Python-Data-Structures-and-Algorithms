@@ -70,7 +70,7 @@ class BinaryTree:
     def level_order_traversal(self, start):
         if start is None:
             return
-        queue = Queue()
+        queue = QueueDS()
         queue.enqueue(start)
         traversal = ""
         while len(queue) > 0:
