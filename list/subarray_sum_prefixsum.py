@@ -2,7 +2,7 @@ arr_list = [-2, 3, 4, -1, 5, -12, 6, 1, 3]
 
 
 def largest_sub_array(arr):
-    prefix = [0]*len(arr)
+    prefix = [0] * len(arr)
     prefix[0] = arr[0]
     for k in range(1, len(arr)):
         prefix[k] = prefix[k - 1] + arr[k]
