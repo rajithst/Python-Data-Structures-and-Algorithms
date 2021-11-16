@@ -88,5 +88,9 @@
    - Basic List operations (append,insert,remove,pop,reverse)
    - Basic List slicing
    - Basic Array operations
+   - Sub Array Sum
+      - Prefix Sum Algorithm
+      - Kadane's Algorithm
    - Merge two sorted lists
+   
  
