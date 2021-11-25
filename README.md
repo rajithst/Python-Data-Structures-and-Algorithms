@@ -93,4 +93,7 @@
       - Kadane's Algorithm
    - Merge two sorted lists
    
- 
+ * Dynamic Programming 1D
+   - Coin change Problem
+   - Longest Increasing Subsequence(LIC) Problem
+   
