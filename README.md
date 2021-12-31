@@ -97,3 +97,5 @@
    - Coin change Problem
    - Longest Increasing Subsequence(LIC) Problem
    
+ * Sorting Algorithms
+   - Bubble Sort
