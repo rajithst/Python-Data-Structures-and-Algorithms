@@ -10,7 +10,7 @@ def largest_sub_array(arr):
     max_sub_array = 0
     for i in range(len(arr)):
         for j in range(i + 1, len(arr)):
-            sub_arr_sum = prefix[j] - prefix[i - 1] if i > 0 else prefix[j];
+            sub_arr_sum = prefix[j] - prefix[i - 1] if i > 0 else prefix[j]
             max_sub_array = max(max_sub_array, sub_arr_sum)
     return max_sub_array
 
